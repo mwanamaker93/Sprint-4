@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import plotly_express as px
+import plotly.express as px
 
 vehicle_df = pd.read_csv("vehicles_us.csv")
 vehicle_df.duplicated().sum()
