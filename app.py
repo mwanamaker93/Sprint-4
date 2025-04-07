@@ -65,6 +65,9 @@ vehicle_df.groupby(['model', 'age', 'price_percentage']).agg('max').head()
 condition_count = vehicle_df[['brand','condition']].value_counts().reset_index()
 condition_count['condition_count'] = condition_count['count']
 
+fig_0 = None
+fig_1 = None
+
 age_range_1 = st.checkbox("First 5 Years for Chart Age 1", value=True)
 if age_range_1:
 	fig_0.update_xaxes(range=[0, 5])
