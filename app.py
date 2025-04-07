@@ -109,7 +109,7 @@ color_discrete_sequence=px.colors.qualitative.Set2
 
 age_range_2 = st.checkbox("First 5 Years for Age 2", value=True)
 if age_range_2:
-	fig_1.update_xaxes(range=[0, 5])
+	fig_1.update_xaxes(range=[3, 10])
 
 st.write(fig_1)
 
