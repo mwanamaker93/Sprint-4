@@ -67,9 +67,9 @@ condition_count['condition_count'] = condition_count['count']
 
 age_range_1 = st.checkbox("First 5 Years for Chart Age 1", value=True)
 if age_range_1:
-	fig.update_xaxes(range=[0, 5])
+	fig_0.update_xaxes(range=[0, 5])
 
-fig = px.scatter(
+fig_0 = px.scatter(
 vehicle_df,
 x="age",
 y="price_percentage",
@@ -98,9 +98,9 @@ vehicle_df_filtered = vehicle_df[mask_filter]
 
 age_range_2 = st.checkbox("First 5 Years for Age 2", value=True)
 if age_range_2:
-	fig.update_xaxes(range=[0, 5])
+	fig_1.update_xaxes(range=[0, 5])
 
-fig = px.histogram(
+fig_1 = px.histogram(
 vehicle_df_filtered,
 x='age',
 y='price',
