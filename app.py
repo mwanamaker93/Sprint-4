@@ -93,6 +93,10 @@ brand_2 = st.selectbox(
 mask_filter = (vehicle_df['brand'] == brand_1) | (vehicle_df['brand'] == brand_2)
 vehicle_df_filtered = vehicle_df[mask_filter]
 
+age_range = st.checkbox(‘First 5 Years’, value=True)
+if age_range:
+	fig.update_xaxes(range=[0, 5])
+
 fig = px.histogram(
 vehicle_df_filtered,
 x='age',
