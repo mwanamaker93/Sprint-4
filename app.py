@@ -65,21 +65,6 @@ vehicle_df.groupby(['model', 'age', 'price_percentage']).agg('max').head()
 condition_count = vehicle_df[['brand','condition']].value_counts().reset_index()
 condition_count['condition_count'] = condition_count['count']
 
-fig_0 = px.scatter(
-vehicle_df,
-x="age",
-y="price_percentage",
-color='condition',
-title='Distribution of Vehicle Price Percentage by Age',
-color_discrete_sequence=px.colors.qualitative.Set1
-)
-
-age_range_1 = st.checkbox("First 5 Years for Chart Age 1", value=True)
-if age_range_1:
-	fig_0.update_xaxes(range=[0, 5])
-
-st.write(fig_0)
-
 st.dataframe(vehicle_df)
 
 brand_list = sorted(vehicle_df['brand'].unique())
@@ -107,7 +92,7 @@ title='Average Price Per Model by Brand',
 color_discrete_sequence=px.colors.qualitative.Set2
 )
 
-age_range_2 = st.checkbox("First 5 Years for Age 2", value=True)
+age_range = st.checkbox("Ages 3 to 10", value=True)
 if age_range_2:
 	fig_1.update_xaxes(range=[3, 10])
 
