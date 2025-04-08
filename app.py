@@ -93,7 +93,7 @@ color_discrete_sequence=px.colors.qualitative.Set2
 )
 
 age_range = st.checkbox("Ages 3 to 10", value=True)
-if age_range_2:
+if age_range:
 	fig_1.update_xaxes(range=[3, 10])
 
 st.write(fig_1)
