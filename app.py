@@ -99,7 +99,8 @@ title='Average Price Per Model by Brand',
 color_discrete_sequence=px.colors.qualitative.Set2
 )
 
-age_range = st.checkbox("Ages 3 to 10", value=True)
+# Checkbox below to adjust x axis for histogram.
+age_range = st.checkbox("Toggle Ages 3 to 10 On or Off", value=True)
 if age_range:
 	fig_1.update_xaxes(range=[3, 10])
 
