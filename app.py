@@ -4,6 +4,13 @@ import plotly.express as px
 
 vehicle_df = pd.read_csv("vehicles_us.csv")
 vehicle_df.duplicated().sum()
+
+for model in vehicle_df['model'].unique():
+    median_value = vehicle_df[vehicle_df['model'] == model]['cylinders'].median()
+    
+    vehicle_df.loc[vehicle_df['model']==model, 'cylinders'] = vehicle_df.loc[vehicle_df['model']==model, 'cylinders'].fillna(median_value)
+
+
 vehicle_df.dropna(subset='model_year', inplace=True)
 vehicle_df.fillna({'is_4wd': 0}, inplace=True)
 vehicle_df.fillna({'paint_color': 'unknown'}, inplace=True)
