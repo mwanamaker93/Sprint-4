@@ -3,6 +3,8 @@ Project for Sprint 4
 
 Description: This project is for the purpose of practice in using streamlit and plotly via the render platform to do analysis and visualization for a vehicle advertisements dataset. There will be scrollable dataframes which were used during the project, and several distributions oriented around price, vehicle condition and brand available as well. A selectbox is used for one histogram to compare one brand to another and checkbox to adjust another histogram's x-axis.
 
+Checkbox in question adjusts histogram's x-axis.
+
 Web App: 
 The web application can be accessed on render here: https://sprint-4-7nnw.onrender.com
 
