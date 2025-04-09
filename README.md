@@ -16,10 +16,15 @@ Install associated packages as seen in (requirements.txt).
 You should be seeing these associated files: 
 
 .gitignore
+
 EDA.ipynb
+
 README.md
+
 app.py
+
 requirements.txt
+
 vehicles_us.csv
 
 In your repository’s virtual environment run:
